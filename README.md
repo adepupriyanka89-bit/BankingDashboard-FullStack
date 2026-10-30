@@ -2,6 +2,10 @@
 
 A full-stack banking transaction dashboard built using ASP.NET Core Web API, React, TypeScript, and .NET 8. This portfolio project demonstrates API integration, transaction data display, search functionality, and responsive UI development.
 
+## Application Screenshot
+
+![Banking Dashboard UI](banking-dashboard.png)
+
 ## Technologies Used
 
 - Backend: C#, .NET 8, ASP.NET Core Web API
