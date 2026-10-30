@@ -1,0 +1,281 @@
+
+/* Main Dashboard */
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f5f9;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+    .dashboard h1 {
+        color: #0f172a;
+        font-size: 32px;
+    }
+
+    .dashboard p {
+        color: #64748b;
+        font-size: 16px;
+    }
+
+/* Account Balance Card */
+
+.balance-card {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+    .balance-card h3 {
+        color: #334155;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .balance-card h2 {
+        color: #1d4ed8;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .balance-card p {
+        color: #64748b;
+        font-size: 14px;
+        margin: 0;
+    }
+
+/* Income and Expenses Cards */
+
+.summary-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.income-card {
+    flex: 1;
+    min-width: 0;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+}
+
+    .income-card h3 {
+        color: #166534;
+        font-size: 18px;
+    }
+
+    .income-card h2 {
+        color: #15803d;
+        font-size: 28px;
+    }
+
+    .income-card p {
+        color: #64748b;
+        font-size: 14px;
+    }
+
+.expense-card {
+    flex: 1;
+    min-width: 0;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+}
+
+    .expense-card h3 {
+        color: #991b1b;
+        font-size: 18px;
+    }
+
+    .expense-card h2 {
+        color: #dc2626;
+        font-size: 28px;
+    }
+
+    .expense-card p {
+        color: #64748b;
+        font-size: 14px;
+    }
+
+/* Recent Transactions Table */
+
+.transactions-section {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+    .transactions-section h2 {
+        color: #0f172a;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .transactions-section table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    .transactions-section th {
+        background-color: #f8fafc;
+        color: #475569;
+        font-size: 14px;
+        padding: 15px;
+        border-bottom: 2px solid #e2e8f0;
+    }
+
+    .transactions-section td {
+        padding: 15px;
+        font-size: 14px;
+        color: #334155;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .transactions-section tbody tr:hover {
+        background-color: #f1f5f9;
+    }
+
+/* Credit and Debit Labels */
+
+.credit-label {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.debit-label {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.transactions-section td.credit-amount {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.transactions-section td.debit-amount {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Transaction Search Box */
+
+.transactions-section input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+    .transactions-section input[type="text"]::placeholder {
+        color: #94a3b8;
+    }
+
+    .transactions-section input[type="text"]:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+/* Mobile Screen */
+
+
+/* Responsive Dashboard */
+
+@media (max-width: 768px) {
+    .dashboard {
+        margin: 20px;
+        padding: 20px;
+    }
+
+        .dashboard h1 {
+            font-size: 26px;
+        }
+
+    .summary-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .balance-card,
+    .income-card,
+    .expense-card {
+        padding: 20px;
+    }
+
+    .transactions-section {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+        .transactions-section table {
+            min-width: 420px;
+        }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        margin: 10px;
+        padding: 15px;
+    }
+
+        .dashboard h1 {
+            font-size: 22px;
+        }
+
+    .balance-card h2 {
+        font-size: 28px;
+    }
+
+    .income-card h2,
+    .expense-card h2 {
+        font-size: 24px;
+    }
+
+    .transactions-section h2 {
+        font-size: 20px;
+    }
+}
+

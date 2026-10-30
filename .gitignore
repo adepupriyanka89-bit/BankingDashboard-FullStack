@@ -1,0 +1,28 @@
+
+# .NET build files
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+
+# React dependencies and build files
+**/node_modules/
+**/dist/
+**/coverage/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/secrets.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
